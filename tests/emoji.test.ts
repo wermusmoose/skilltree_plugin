@@ -1,0 +1,3 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {matchesEmoji,pastedEmoji} from '../src/emoji-search';
+test('emoji names work in Russian and English',()=>{for(const q of ['лось','moose',' MOOSE ','🫎'])assert.ok(matchesEmoji('🫎','Природа и животные',q));assert.ok(matchesEmoji('🐱','Природа','кот'));assert.ok(matchesEmoji('🔒','Знаки','замок'));assert.ok(matchesEmoji('💚','Знаки','зелёное'));assert.equal(matchesEmoji('🐶','Природа','moose'),false);});
+test('pasted emoji preserves full sequences beyond the catalog',()=>{for(const s of ['🫎','🪼','👩🏽‍💻','👨‍👩‍👧‍👦','🇷🇺','1️⃣'])assert.equal(pastedEmoji(s),s);for(const s of ['moose','лось','','123','😀😀','hello 😀'])assert.equal(pastedEmoji(s),null);});

@@ -1,0 +1,9 @@
+{
+  "id": "branch-tree",
+  "name": "Branch Tree",
+  "version": "0.7.21",
+  "minAppVersion": "1.5.0",
+  "description": "Деревья заметок с автоматической сеткой, цветными ветками и встроенными заметками.",
+  "author": "Wermus",
+  "isDesktopOnly": true
+}

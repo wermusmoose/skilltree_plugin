@@ -1,0 +1,11 @@
+node_modules/
+main.js
+*.log
+*.zip
+data.json
+.env
+.env.*
+.obsidian/
+.skilltree_files/
+*.skilltree
+Обновление *.md
